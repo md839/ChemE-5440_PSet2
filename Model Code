@@ -1,0 +1,63 @@
+julia> pwd()
+"/Users/xxlittleboarderxx"
+
+julia> cd("/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2")
+
+julia> pwd()
+"/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2"
+
+julia> include("/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/sample_parameter_ensemble.jl")
+ERROR: LoadError: Unexpected character
+Line: 0
+Around: ...pwd   "host_type":"cel...
+            ^
+
+Stacktrace:
+ [1] error(::String) at ./error.jl:33
+ [2] _error(::String, ::JSON.Parser.MemoryParserState) at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:142
+ [3] parse_jsconstant(::JSON.Parser.ParserContext{Dict{String,Any},Int64,true,nothing}, ::JSON.Parser.MemoryParserState) at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:195
+ [4] parse_value(::JSON.Parser.ParserContext{Dict{String,Any},Int64,true,nothing}, ::JSON.Parser.MemoryParserState) at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:172
+ [5] #parse#1(::Type, ::Type{Int64}, ::Bool, ::Nothing, ::typeof(JSON.Parser.parse), ::String) at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:463
+ [6] (::JSON.Parser.var"#kw##parse")(::NamedTuple{(:dicttype, :inttype, :allownan, :null),Tuple{DataType,DataType,Bool,Nothing}}, ::typeof(JSON.Parser.parse), ::String) at ./none:0
+ [7] (::JSON.Parser.var"#4#5"{DataType,DataType,Nothing,Bool,Bool,Int64})(::IOStream) at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:524
+ [8] #open#271(::Base.Iterators.Pairs{Union{},Union{},Tuple{},NamedTuple{(),Tuple{}}}, ::typeof(open), ::JSON.Parser.var"#4#5"{DataType,DataType,Nothing,Bool,Bool,Int64}, ::String) at ./io.jl:298
+ [9] open at ./io.jl:296 [inlined]
+ [10] #parsefile#3 at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:522 [inlined]
+ [11] parsefile at /Users/xxlittleboarderxx/.julia/packages/JSON/d89fA/src/Parser.jl:521 [inlined]
+ [12] build_biophysical_dictionary(::String, ::Symbol) at /Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/Utility.jl:587
+ [13] build_data_dictionary(::Tuple{Float64,Float64,Float64}, ::String, ::Symbol) at /Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/Data.jl:41
+ [14] #main#222(::Float64, ::typeof(main), ::String, ::String) at /Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/sample_parameter_ensemble.jl:109
+ [15] (::var"#kw##main")(::NamedTuple{(:sample_fraction,),Tuple{Float64}}, ::typeof(main), ::String, ::String) at ./none:0
+ [16] top-level scope at /Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/sample_parameter_ensemble.jl:151
+ [17] include at ./boot.jl:328 [inlined]
+ [18] include_relative(::Module, ::String) at ./loading.jl:1105
+ [19] include(::Module, ::String) at ./Base.jl:31
+ [20] include(::String) at ./client.jl:424
+ [21] top-level scope at REPL[78]:1
+in expression starting at /Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/sample_parameter_ensemble.jl:151
+
+julia> include("/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/sample_parameter_ensemble.jl")
+sample_index = 1
+sample_index = 2
+sample_index = 3
+sample_index = 4
+sample_index = 5
+sample_index = 6
+sample_index = 7
+sample_index = 8
+sample_index = 9
+sample_index = 10
+sample_index = 11
+sample_index = 12
+sample_index = 13
+sample_index = 14
+sample_index = 15
+sample_index = 16
+sample_index = 17
+sample_index = 18
+sample_index = 19
+sample_index = 20
+
+julia> include("/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/visualize_mRNA_deGFP_simulations.jl")
+
+julia> include("/Users/xxlittleboarderxx/Downloads/CHEME-5440-7770-S20-master/problem_sets/PS2/visualize_prot_deGFP_simulations.jl")
